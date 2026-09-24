@@ -124,17 +124,19 @@ function Contacts() {
             />
           </div>
 
-          <button type="submit" className="search-button">
-            Search
-          </button>
+          <div className="search-button-wrapper">
+            <button type="submit" className="search-button">
+              Search
+            </button>
 
-          <button type="button" className="search-button" onClick={handleShowAll}>
-            Show All Contacts
-          </button>
+            <button type="button" className="search-button" onClick={handleShowAll}>
+              Show All Contacts
+            </button>
 
-          <button type="button" className="search-button" onClick={handleAdd}>
-            Add Contact
-          </button>
+            <button type="button" className="search-button" onClick={handleAdd}>
+              Add Contact
+            </button>
+          </div>
         </form>
       </section>
 

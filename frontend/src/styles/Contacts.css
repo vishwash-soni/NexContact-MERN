@@ -381,6 +381,13 @@
   .contacts-grid {
     grid-template-columns: 1fr;
   }
+
+  .contacts-search-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 
@@ -416,6 +423,12 @@
     height: 46px;
 
     padding: 0 15px;
+  }
+  .contacts-search-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
