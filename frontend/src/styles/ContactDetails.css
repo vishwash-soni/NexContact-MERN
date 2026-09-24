@@ -1,0 +1,389 @@
+/* =========================
+   CONTACT DETAILS PAGE
+========================= */
+
+.contact-details-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+
+  background: var(--bg-color);
+  color: var(--text-color);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: none;
+  background: transparent;
+
+  color: var(--secondary-text);
+
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+  padding: 8px 4px;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back-button:hover {
+  color: var(--text-color);
+  transform: translateX(-3px);
+}
+
+.back-button svg {
+  font-size: 18px;
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.contact-details-card {
+  width: 100%;
+  max-width: 650px;
+
+  margin: 30px auto 0;
+
+  background: var(--card-color);
+  color: var(--text-color);
+
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+
+  padding: 35px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+
+  text-align: center;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================
+   DARK MODE CARD SHADOW
+========================= */
+
+.dark .contact-details-card {
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================
+   AVATAR
+========================= */
+
+.details-avatar-section {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 18px;
+}
+
+.details-avatar {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 5px solid var(--border-color);
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================
+   NAME
+========================= */
+
+.details-name {
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  color: var(--text-color);
+}
+
+
+/* =========================
+   EMAIL
+========================= */
+
+.details-email {
+  margin: 7px 0 30px;
+
+  color: var(--secondary-text);
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   INFORMATION
+========================= */
+
+.details-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+
+  text-align: left;
+}
+
+
+/* =========================
+   INFORMATION ROW
+========================= */
+
+.details-row {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 15px;
+
+  padding: 16px;
+
+  background: var(--bg-color);
+
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.details-row:hover {
+  background: var(--card-color);
+
+  border-color: var(--accent-color);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.details-icon {
+  min-width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--card-color);
+
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+
+  color: var(--accent-color);
+
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.06);
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.details-icon svg {
+  font-size: 18px;
+}
+
+
+/* =========================
+   LABEL + VALUE
+========================= */
+
+.details-label {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: var(--secondary-text);
+
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+
+.details-row p {
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 1.5;
+
+  color: var(--text-color);
+
+  word-break: break-word;
+}
+
+
+/* =========================
+   NOTES
+========================= */
+
+.notes-row {
+  align-items: flex-start;
+}
+
+.notes-row p {
+  color: var(--secondary-text);
+}
+
+
+/* =========================
+   ACCENT EFFECT
+========================= */
+
+.details-row:hover .details-icon {
+  background: var(--accent-color);
+
+  border-color: var(--accent-color);
+
+  color: #171717;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+  .contact-details-page {
+    padding: 25px 15px;
+  }
+
+
+  .back-button {
+    font-size: 14px;
+  }
+
+
+  .contact-details-card {
+    margin-top: 20px;
+
+    padding: 25px 18px;
+
+    border-radius: 16px;
+  }
+
+
+  .details-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+
+  .details-name {
+    font-size: 24px;
+  }
+
+
+  .details-email {
+    font-size: 14px;
+
+    margin-bottom: 24px;
+  }
+
+
+  .details-info {
+    gap: 12px;
+  }
+
+
+  .details-row {
+    padding: 13px;
+
+    gap: 12px;
+  }
+
+
+  .details-icon {
+    min-width: 36px;
+    height: 36px;
+  }
+
+
+  .details-icon svg {
+    font-size: 16px;
+  }
+
+
+  .details-row p {
+    font-size: 14px;
+  }
+
+
+  .details-label {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================
+   EXTRA SMALL DEVICES
+========================= */
+
+@media (max-width: 380px) {
+
+  .contact-details-page {
+    padding: 20px 10px;
+  }
+
+
+  .contact-details-card {
+    padding: 22px 14px;
+  }
+
+
+  .details-avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+
+  .details-name {
+    font-size: 22px;
+  }
+
+
+  .details-row {
+    padding: 11px;
+  }
+}

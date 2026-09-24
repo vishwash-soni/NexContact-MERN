@@ -1,0 +1,279 @@
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px 20px;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================
+   LOGIN CONTAINER
+========================= */
+
+.login-container {
+  width: 100%;
+  max-width: 430px;
+
+  padding: 35px;
+
+  background-color: var(--card-color);
+
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.login-logo {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 20px;
+}
+
+.login-logo img {
+  width: 70px;
+  height: 70px;
+
+  object-fit: contain;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-header h1 {
+  margin-bottom: 8px;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  color: var(--text-color);
+}
+
+.login-header p {
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: var(--secondary-text);
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+
+  color: var(--text-color);
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.form-group input {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+
+  outline: none;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  font-size: 15px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: var(--secondary-text);
+}
+
+.form-group input:focus {
+  border-color: var(--accent-color);
+
+  box-shadow: 0 0 0 3px rgba(255, 189, 89, 0.15);
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.form-error {
+  margin: 0;
+
+  font-size: 13px;
+  color: #e05252;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-button {
+  width: 100%;
+
+  padding: 13px;
+  margin-top: 5px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: var(--accent-color);
+  color: #171717;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+  .login-page {
+    padding: 20px 15px;
+  }
+
+  .login-container {
+    padding: 25px 20px;
+    border-radius: 12px;
+  }
+
+  .login-header h1 {
+    font-size: 24px;
+  }
+
+  .login-header p {
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   REGISTER LINK
+========================= */
+
+.register-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  margin-top: 22px;
+
+  font-size: 14px;
+}
+
+.register-link p {
+  color: var(--secondary-text);
+}
+
+.register-link a {
+  color: var(--text-color);
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.register-link a:hover {
+  color: var(--accent-hover);
+}
+
+/* =========================
+   SERVER ERROR BANNER
+========================= */
+
+.form-error.banner {
+  margin-bottom: 18px;
+  padding: 10px 14px;
+
+  background-color: rgba(224, 82, 82, 0.1);
+  border: 1px solid rgba(224, 82, 82, 0.3);
+  border-radius: 8px;
+
+  font-size: 14px;
+  text-align: center;
+}

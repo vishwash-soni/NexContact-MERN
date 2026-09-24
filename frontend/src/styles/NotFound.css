@@ -1,0 +1,133 @@
+/* =========================
+   NOT FOUND PAGE
+========================= */
+
+.not-found {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 30px;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================
+   404 NUMBER
+========================= */
+
+.not-found h1 {
+  font-size: clamp(100px, 18vw, 180px);
+  line-height: 1;
+
+  font-weight: 800;
+  letter-spacing: -8px;
+
+  color: var(--accent-color);
+
+  text-shadow: 0 8px 25px rgba(255, 189, 89, 0.2);
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.not-found h2 {
+  margin-top: 15px;
+
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 700;
+
+  color: var(--text-color);
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.not-found p {
+  max-width: 450px;
+
+  margin-top: 12px;
+  margin-bottom: 28px;
+
+  font-size: 16px;
+  line-height: 1.6;
+
+  color: var(--secondary-text);
+}
+
+
+/* =========================
+   GO HOME BUTTON
+========================= */
+
+.not-found a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 26px;
+
+  border-radius: 8px;
+
+  background-color: var(--accent-color);
+  color: #171717;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+}
+
+
+.not-found a:hover {
+  background-color: var(--accent-hover);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .not-found {
+    padding: 20px;
+  }
+
+  .not-found h1 {
+    font-size: clamp(90px, 25vw, 130px);
+    letter-spacing: -4px;
+  }
+
+  .not-found h2 {
+    font-size: 26px;
+  }
+
+  .not-found p {
+    max-width: 320px;
+    font-size: 14px;
+  }
+
+  .not-found a {
+    padding: 11px 22px;
+  }
+}

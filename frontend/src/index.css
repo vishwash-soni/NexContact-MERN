@@ -1,0 +1,89 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   LIGHT THEME
+========================= */
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #171717;
+  --secondary-text: #666666;
+
+  --accent-color: #ffbd59;
+  --accent-hover: #f5ad3d;
+
+  --card-color: #fff8ed;
+  --border-color: #eeeeee;
+}
+
+
+/* =========================
+   DARK THEME
+========================= */
+
+.dark {
+  --bg-color: #111111;
+  --text-color: #ffffff;
+  --secondary-text: #aaaaaa;
+
+  --accent-color: #ffbd59;
+  --accent-hover: #f5ad3d;
+
+  --card-color: #1c1c1c;
+  --border-color: #2c2c2c;
+}
+
+
+/* =========================
+   GLOBAL BODY
+========================= */
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+
+/* =========================
+   GLOBAL BUTTON STATES
+========================= */
+
+button {
+  font-family: inherit;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Keyboard focus outline for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}

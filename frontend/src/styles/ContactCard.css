@@ -1,0 +1,318 @@
+/* =========================
+   CONTACT CARD
+========================= */
+
+.contact-card {
+  width: 100%;
+  max-width: 700px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 20px 22px;
+
+  background-color: var(--card-color);
+
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.10);
+
+  border-color: var(--accent-color);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.contact-image-section {
+  flex-shrink: 0;
+
+  width: 78px;
+  height: 78px;
+
+  padding: 3px;
+
+  border-radius: 50%;
+
+  background: var(--accent-color);
+}
+
+.contact-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 3px solid var(--card-color);
+}
+
+
+/* =========================
+   CONTACT INFO
+========================= */
+
+.contact-info {
+  min-width: 0;
+  flex: 1;
+
+  margin-left: 20px;
+}
+
+.contact-name {
+  margin: 0 0 12px;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  color: var(--text-color);
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================
+   CONTACT DETAILS
+========================= */
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 7px;
+
+  color: var(--secondary-text);
+
+  font-size: 14px;
+}
+
+.contact-detail svg {
+  flex-shrink: 0;
+
+  width: 15px;
+  height: 15px;
+
+  color: var(--accent-color);
+}
+
+.contact-detail span {
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  margin-left: 20px;
+}
+
+
+/* =========================
+   COMMON BUTTON
+========================= */
+
+.contact-actions button {
+  min-width: 85px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 8px 12px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-actions button svg {
+  width: 14px;
+  height: 14px;
+}
+
+
+/* =========================
+   EDIT BUTTON
+========================= */
+
+.edit-button {
+  border: 1px solid var(--accent-color);
+
+  background-color: transparent;
+
+  color: var(--text-color);
+}
+
+.edit-button:hover {
+  background-color: var(--accent-color);
+
+  color: #171717;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+.delete-button {
+  border: 1px solid #e05252;
+
+  background-color: transparent;
+
+  color: #e05252;
+}
+
+.delete-button:hover {
+  background-color: #e05252;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .contact-card {
+    padding: 16px;
+
+    border-radius: 15px;
+  }
+
+  .contact-image-section {
+    width: 62px;
+    height: 62px;
+  }
+
+  .contact-info {
+    margin-left: 14px;
+  }
+
+  .contact-name {
+    font-size: 16px;
+
+    margin-bottom: 8px;
+  }
+
+  .contact-detail {
+    font-size: 12px;
+
+    gap: 6px;
+  }
+
+  .contact-detail svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .contact-actions {
+    margin-left: 10px;
+
+    gap: 6px;
+  }
+
+  .contact-actions button {
+    min-width: 38px;
+
+    width: 38px;
+    height: 34px;
+
+    padding: 8px;
+  }
+
+  .contact-actions button span {
+    display: none;
+  }
+
+  .contact-actions button svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .contact-card {
+    padding: 13px;
+  }
+
+  .contact-image-section {
+    width: 52px;
+    height: 52px;
+  }
+
+  .contact-info {
+    margin-left: 10px;
+  }
+
+  .contact-name {
+    font-size: 15px;
+  }
+
+  .contact-detail {
+    font-size: 11px;
+  }
+
+  .contact-actions {
+    margin-left: 7px;
+  }
+
+  .contact-actions button {
+    width: 34px;
+    height: 31px;
+  }
+}
