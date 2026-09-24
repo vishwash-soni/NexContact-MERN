@@ -18,7 +18,7 @@ const app = express();
 // Production me proxy ke peeche cookie/secure sahi chale isliye
 app.set("trust proxy", 1);
 
-const allowedOrigins = ["https://nex-contact.vercel.app"];
+const allowedOrigins = ["https://nex-contact-mern.vercel.app/"];
 
 app.use(cors({ origin: allowedOrigins, credentials: true }));
 app.use(express.json());
