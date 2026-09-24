@@ -1,24 +1,28 @@
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
-const env = require("../config/env");
-const AppError = require("../utils/AppError");
 
+// Cookie ka token check karke req.user set karta hai
 const protect = async (req, res, next) => {
-  const token = req.cookies?.token;
-  if (!token) throw new AppError(401, "Not authorized, no token");
+    try {
+        const token = req.cookies.token;
+        if (!token) {
+            return res.status(401).json({ message: "Not authorized, no token" });
+        }
 
-  let decoded;
-  try {
-    decoded = jwt.verify(token, env.jwtSecret);
-  } catch {
-    throw new AppError(401, "Not Authorized User");
-  }
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const user = await User.findById(decoded.id).select("-password");
 
-  const user = await User.findById(decoded.id).select("_id name email").lean();
-  if (!user) throw new AppError(401, "Not Authorized User"); // user delete ho chuka ho to
+        // User delete ho chuka ho to aage mat jaane do
+        if (!user) {
+            return res.status(401).json({ message: "Not Authorized User" });
+        }
 
-  req.user = user;
-  next();
+        req.user = user;
+        return next();
+    }
+    catch (error) {
+        return res.status(401).json({ message: "Not Authorized User" });
+    }
 };
 
 module.exports = protect;

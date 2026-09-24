@@ -1,18 +1,30 @@
 const mongoose = require("mongoose");
 
 const emailSchema = new mongoose.Schema({
-  email: { type: String, required: true, unique: true, lowercase: true, trim: true },
+    email: {
+        type: String,
+        required: true
+    },
 
-  otpHash: { type: String, default: null },        // OTP plain text me store nahi hota
-  otpExpiresAt: { type: Date, default: null },
-  verifyAttempts: { type: Number, default: 0 },    // galat OTP ki koshishein
+    otp: {
+        type: String,
+        required: true
+    },
 
-  lastSentAt: { type: Date, default: null },       // resend cooldown
-  sendCount: { type: Number, default: 0 },         // 1 ghante me kitne OTP bheje
-  sendWindowStart: { type: Date, default: null },
+    attempts: {
+        type: Number,
+        default: 1
+    },
 
-  // TTL: record 1 ghante baad Mongo khud delete kar deta hai (stale record ab kabhi nahi atkega)
-  expireAt: { type: Date, required: true, index: { expireAfterSeconds: 0 } },
-});
+    expiresAt: {
+        type: Date,
+        required: true
+    },
+
+    lockUntil: {
+        type: Date,
+        default: null
+    }
+})
 
 module.exports = mongoose.model("EmailVerify", emailSchema);
