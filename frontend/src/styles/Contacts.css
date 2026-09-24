@@ -180,6 +180,8 @@
   border-radius: 11px;
 
   transition: 0.2s ease;
+
+  margin-bottom: 15px;
 }
 
 .search-input-wrapper:focus-within {
@@ -436,4 +438,9 @@
 .contacts-content{
     display: flex;
     flex-direction: column;
+}
+
+.search-button-wrapper{
+    display: flex;
+    gap: 15px;
 }
