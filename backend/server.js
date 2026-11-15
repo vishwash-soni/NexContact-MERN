@@ -9,11 +9,9 @@ const dns = require("dns");
 const connectDB = require("./config/db.js");
 
 // Sirf local me: kuch networks pe MongoDB "querySrv ECONNREFUSED" deta hai, uska fix
-// if (process.env.NODE_ENV !== "production") {
-//   dns.setServers(["8.8.8.8", "1.1.1.1"]);
-// }
-
-dns.setServers(["8.8.8.8", "1.1.1.1"]);
+if (process.env.NODE_ENV !== "production") {
+  dns.setServers(["8.8.8.8", "1.1.1.1"]);
+}
 
 const app = express();
 
